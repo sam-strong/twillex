@@ -10,6 +10,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'terminal-notifier-guard'
+  gem 'shoulda-matchers'
 end
 
 bundle
@@ -19,3 +20,14 @@ Start postgres
 
 rake db:create
 rails g rspec:install
+
+Add to gemfile
+
+gem "twitter-bootstrap-rails"
+
+
+Run generator
+
+bundle
+rails generate bootstrap:install static
+

@@ -18,6 +18,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem "twitter-bootstrap-rails"
 end
 
 group :development, :test do
@@ -25,6 +26,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'terminal-notifier-guard'
+  gem 'shoulda-matchers' # http://rubydoc.info/github/thoughtbot/shoulda-matchers/master/frames
 end
 
 gem 'jquery-rails'
