@@ -31,3 +31,4 @@ Run generator
 bundle
 rails generate bootstrap:install static
 
+rails g bootstrap:layout application fixed
