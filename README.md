@@ -32,3 +32,10 @@ bundle
 rails generate bootstrap:install static
 
 rails g bootstrap:layout application fixed
+
+
+## Git flow
+
+* Clone this repository
+* `git checkout -b develop origin/develop`
+* `git checkout -b feature_name`
