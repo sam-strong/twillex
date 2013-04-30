@@ -36,6 +36,7 @@ end
 gem 'jquery-rails'
 
 gem 'open_exchange_rates'
+gem 'curb'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
