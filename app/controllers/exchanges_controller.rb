@@ -1,3 +1,3 @@
-class ExchangeController < ApplicationController
+class ExchangesController < ApplicationController
 
 end
