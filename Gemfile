@@ -26,7 +26,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'terminal-notifier-guard'
-  gem 'shoulda-matchers' # http://rubydoc.info/github/thoughtbot/shoulda-matchers/master/frames
+  # http://rubydoc.info/github/thoughtbot/shoulda-matchers/master/frames
+  gem 'shoulda-matchers'
+  # This will massively speed up your tests
+  gem 'zeus'
+  gem 'guard-zeus'
 end
 
 gem 'jquery-rails'
