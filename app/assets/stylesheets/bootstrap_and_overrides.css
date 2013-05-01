@@ -6,5 +6,23 @@
   =require twitter-bootstrap-static/fontawesome
   */
   body {
-    padding-top: 40px;
+    padding-top: 280px;
+    background-color: black;
+    color: #b94a48;
+    position: relative;
+    text-align: center;
+  }
+
+  .hero-unit {
+    background: rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+  }
+
+  .hero-unit h2 {
+    font-family: 'Faster One', cursive;
+    padding-bottom: 20px;
+  }
+
+  .hero-unit .inline-form button {
+    margin-bottom: 10px;
   }
