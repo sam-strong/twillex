@@ -18,8 +18,8 @@ development:
   database: twillex_development
   pool: 5
   host: localhost
-  username:
-  password:
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -45,13 +45,5 @@ test:
   database: twillex_test
   pool: 5
   host: localhost
-  username:
-  password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: twillex_production
-  pool: 5
-  username: twillex
-  password:
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
