@@ -1,12 +1,10 @@
 class ExchangesController < ApplicationController
 
   def create
-    @exchange = Exchange.convert(params['amount'].to_i, params['from_currency'], params['to_currency'])
-    # respond_to do |format|
-    #   format.json { render :json => { :amount => @exchange } }
-    # end
-    render :json => { :amount => @exchange }
+    @exchange = Exchange.from_config
+    @exchange.convert(params['amount'].to_i, params['from_currency'], params['to_currency'])
 
+    render :json => { :amount => @exchange }
   end
 end
 
