@@ -1,0 +1,12 @@
+<div class="hero-unit">
+  <h2>Twillex Currency Converter</h2>
+
+  <%= form_tag("/exchange", :method => "post", class: 'inline-form') do %>
+    <%= text_field_tag :amount, nil, placeholder: 'amount', class: "input-mini" %>
+    <%= select_tag :from, options_for_select(["GBP","EUR"]), placeholder: 'from', class: "input-small" %>
+
+    <%= select_tag :to, options_for_select(["GBP","EUR"]), placeholder: 'to', class: "input-small" %>
+    <%= button_tag "Submit", type: "submit", class: "btn btn-primary" %>
+  <% end %>
+
+</div>
