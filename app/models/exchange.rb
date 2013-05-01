@@ -1,6 +1,7 @@
 class Exchange
 
-  def self.convert(currency)
-    currency * 1.5
+  def self.convert(currency, from, to)
+    10
   end
+
 end
