@@ -3,6 +3,7 @@ Twillex::Application.routes.draw do
   resource :exchange, :only => [:create]
   root to: 'welcome#index'
 
+  match 'twilio/process_sms' => 'twilio#process_sms'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
