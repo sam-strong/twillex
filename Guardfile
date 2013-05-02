@@ -2,7 +2,7 @@
 # More info at https://github.com/guard/guard#readme
 
 # Run `zeus start` first to speed up your tests
-guard 'rspec', zeus: true, bundler: false  do
+guard 'rspec', bundler: false  do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
