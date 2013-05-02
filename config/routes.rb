@@ -1,6 +1,5 @@
 Twillex::Application.routes.draw do
 
-
   root to: 'welcome#index'
   resource :exchange, :only => [:create]
 

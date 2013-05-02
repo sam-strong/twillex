@@ -1,4 +1,5 @@
 class Exchange
+
   attr_reader :provider
 
   def self.from_config
@@ -7,7 +8,7 @@ class Exchange
   end
 
   def initialize(provider)
-    raise "Provider must provide a convert method" unless provider && provider.respond_to?('convert')
+    raise "Provider must provide a convert method" unless provider.respond_to?('convert')
     @provider = provider
   end
 
