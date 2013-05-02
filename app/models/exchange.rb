@@ -1,5 +1,7 @@
 class Exchange
 
+  CURRENCIES = ["USD","GBP","EUR"]
+
   attr_reader :provider
 
   def self.from_config
