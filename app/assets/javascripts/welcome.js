@@ -10,7 +10,6 @@ $( document ).ready(function(){
 
 
 
-
 //   validate(function(e) {
 //     e.preventDefault();
 //     alert("thanks for visiting");
