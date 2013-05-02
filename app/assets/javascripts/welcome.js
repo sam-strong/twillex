@@ -7,33 +7,3 @@ $( document ).ready(function(){
     }
   });
 });
-
-
-
-//   validate(function(e) {
-//     e.preventDefault();
-//     alert("thanks for visiting");
-//   });
-// });
-
-
-// function ValideInteger(value) {
-//   if (value.)
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-// $("#amount").keyup(function(){
-//   var value =
-
-
-// })
