@@ -6,7 +6,7 @@ $(document).ready(function() {
   });
  $("form").on("ajax:success", function(e, data, status, xhr)
  {
-    return $("#currency").html(data.to);
+    return $("#currency").html(data.to_currency);
   });
 
 });
