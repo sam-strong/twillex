@@ -5,11 +5,19 @@
 
   <h2>Twillex Currency Converter</h2>
 
-  <%= form_tag("/exchange", :method => "post", class: 'form-inline') do %>
+  <%= form_tag("/exchange", :method => "post", remote: true, class: 'inline-form') do %>
     <%= text_field_tag :amount, nil, placeholder: 'amount', class: "input-mini" %>
-    <%= currencies_select_tag :from_currency, placeholder: 'from', class: "input-small" %>
+    <%= select_tag :from_currency, options_for_select(["GBP","EUR"]), placeholder: 'from_currency', class: "input-small" %>
 
-    <%= currencies_select_tag :to_currency, placeholder: 'to', class: "input-small" %>
-    <%= submit_tag "Submit", class: "btn btn-primary" %>
+    <%= select_tag :to_currency, options_for_select(["GBP","EUR"]), placeholder: 'to_currency', class: "input-small" %>
+    <%= button_tag "Submit", type: "submit", class: "btn btn-primary" %>
   <% end %>
+
+
+<span id="result">
+</span>
+<span id="currency">
+</span>
+
 </div>
+
