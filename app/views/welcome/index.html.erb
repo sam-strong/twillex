@@ -1,12 +1,23 @@
+<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 <div class="hero-unit">
+
+<div id="signin-link"><%= link_to("Sign up", 'users/new') %></div>
+
   <h2>Twillex Currency Converter</h2>
 
-  <%= form_tag("/exchange", :method => "post", class: 'inline-form') do %>
+  <%= form_tag("/exchange", :method => "post", remote: true, class: 'inline-form') do %>
     <%= text_field_tag :amount, nil, placeholder: 'amount', class: "input-mini" %>
-    <%= select_tag :from, options_for_select(["GBP","EUR"]), placeholder: 'from', class: "input-small" %>
+    <%= select_tag :from_currency, options_for_select(["GBP","EUR","USD", "JPY"]), placeholder: 'from_currency', class: "input-small" %>
 
-    <%= select_tag :to, options_for_select(["GBP","EUR"]), placeholder: 'to', class: "input-small" %>
+    <%= select_tag :to_currency, options_for_select(["GBP","EUR","USD", "JPY"]), placeholder: 'to_currency', class: "input-small" %>
     <%= button_tag "Submit", type: "submit", class: "btn btn-primary" %>
   <% end %>
 
+
+<span id="result">
+</span>
+<span id="currency">
+</span>
+
 </div>
+
