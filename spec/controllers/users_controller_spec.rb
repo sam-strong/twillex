@@ -7,7 +7,7 @@ require 'spec_helper'
       describe "#new" do
 
         it "assigns a new user as @user" do
-          get :new, {}
+          get :new
           assigns(:user).should be_a_new(User)
         end
 
@@ -37,7 +37,7 @@ require 'spec_helper'
             response.should redirect_to(root_path)
           end
 
-        context "with invalid params" do
+        context "with invalid attributes" do
           it "doesn't create a new user" do
             post :create, {:user => {  }}
             assigns(:user).should_not be_persisted
