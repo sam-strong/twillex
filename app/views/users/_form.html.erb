@@ -1,0 +1,18 @@
+<%= form_for @user do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %><br/>
+
+  <%= f.label "Convert from currency" %>
+  <%= f.select :from_currency, ["USD","GBP",
+      "EUR"] %><br/>
+
+  <%= f.label "Convert to currency" %>
+  <%= f.select :to_currency, ["GBP","USD",
+      "EUR"] %><br/>
+
+  <%= f.submit %>
+<% end %>
