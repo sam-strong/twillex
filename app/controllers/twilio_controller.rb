@@ -14,7 +14,7 @@ class TwilioController < ApplicationController
     @twilio_client.account.sms.messages.create(
       :from => "+44#{twilio_phone_number}",
       :to => number_to_send_to,
-      :body => "This is an message. It gets sent to #{number_to_send_to}"
+      :body => "Hey #{user.name}, that is #{user.amount} in #{user.to_currency}"
     )
   end
 
@@ -38,5 +38,5 @@ class TwilioController < ApplicationController
       @type = "Not sure"
       render 'not_sure.xml.erb', :content_type => 'text/xml'
     end
-
+  end
 end
