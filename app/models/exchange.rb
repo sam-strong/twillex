@@ -1,6 +1,6 @@
 class Exchange
 
-  CURRENCIES = ["USD","GBP","EUR"]
+  CURRENCIES = ["USD","GBP","EUR", "JPY"]
 
   attr_reader :provider
 
