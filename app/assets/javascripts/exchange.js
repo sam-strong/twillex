@@ -8,4 +8,5 @@ $(document).ready(function() {
  {
     return $("#currency").html(data.to);
   });
+
 });
