@@ -5,5 +5,8 @@ $( document ).ready(function(){
     if ($.isNumeric(value) == false) {
     alert('please enter a valid number');
     }
+    else if (value > 0 == false) {
+      alert("the number must be positive")
+    }
   });
 });
