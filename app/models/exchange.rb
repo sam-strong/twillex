@@ -1,12 +1,13 @@
 class Exchange
 
-  CURRENCIES = ["USD","GBP","EUR"]
+  CURRENCIES = ["USD","GBP","EUR", "JPY"]
 
   attr_reader :provider
 
   def self.from_config
     # should instantiate a provider based on some config or initializer setting
-    return Exchange.new(DummyExchangeProvider.new(1.5))
+    return Exchange.new(OpenExchangeRatesProvider.new)
+     # return Exchange.new(DummyExchangeProvider.new(1.5))
   end
 
   def initialize(provider)
