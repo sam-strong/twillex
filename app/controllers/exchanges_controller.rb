@@ -2,7 +2,7 @@ class ExchangesController < ApplicationController
 
   def create
 
-    exchange = ExchangesController.from_config
+    exchange = Exchange.from_config
     result = exchange.convert(params[:amount].to_i, params[:from_currency], params[:to_currency])
 
 
