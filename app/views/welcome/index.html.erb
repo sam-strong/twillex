@@ -1,7 +1,12 @@
 <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 <div class="hero-unit">
 
-<div id="signin-link"><%= link_to("Sign up", 'users/new') %></div>
+<% if current_user %>
+  <%= @user.name %> is logged in
+<% else %>
+  <div id="signin-link"><%= link_to("Sign up", 'users/new') %></div>
+<% end %>
+
 
   <h2>Twillex Currency Converter</h2>
 

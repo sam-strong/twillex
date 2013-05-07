@@ -20,6 +20,7 @@ describe UsersController do
 
   describe "#create" do
     context "with valid attributes" do
+      # before {post :create, {:user => attributes }}
       it "creates a new User" do
 
         expect {
@@ -30,6 +31,11 @@ describe UsersController do
         post :create, {:user => attributes}
         assigns(:user).should be_a(User)
         assigns(:user).should be_persisted
+      end
+
+      it "assigns user_id to session" do
+        post :create, {:user => attributes}
+        session[:user_id].should eq assigns(:user).id
       end
 
       it "redirects to the homepage after user is created" do
