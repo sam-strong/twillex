@@ -4,7 +4,7 @@ Twillex::Application.routes.draw do
   resource :exchange, :only => [:create]
   resources :users
 
-  match 'twilio/process_sms' => 'twilio#process_sms'
+  resource :twilio, :only => [:create]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

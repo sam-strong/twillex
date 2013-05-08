@@ -6,14 +6,20 @@ class TwilioApi
 
 
   def send_sms(to, body)
-    messenger.create({:from => '+441704450128', :to => to, :body => body})
+    response = messenger.create({:from => '+441704450128', :to => to, :body => body})
   end
 
   def receives_sms(sms_id)
-    messenger.get(sms_id)
+    response = messenger.get(sms_id)
+    # log(response)
   end
 
   private
+
+  # def log(response)
+  #   Rails.logger.info("Sending message via Twilio API to #{response.to} with status #{response.status}")
+  #   Rails.logger.info("Twilio message was: #{response.body}")
+  # end
 
   def set_up_client
     @account_sid = "AC2272335f96708cace80d492da00d18ed"
