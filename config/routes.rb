@@ -1,6 +1,12 @@
 Twillex::Application.routes.draw do
 
   root to: 'welcome#index'
+
+  match 'auth/:provider/callback' => 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
+
   resource :exchange, :only => [:create]
   resources :users
 
