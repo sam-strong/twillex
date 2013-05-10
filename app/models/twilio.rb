@@ -6,7 +6,7 @@ auth_token = "777673f58d73ae1790981f72f9b410de"
 client = Twilio::REST::Client.new account_sid, auth_token
 
 
-class Twilio
+class TwilioSMS
 
 
   from = "+14159998888" # Your Twilio number

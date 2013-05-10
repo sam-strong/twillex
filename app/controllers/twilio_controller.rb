@@ -1,4 +1,4 @@
-class TwilioController < ApplicationController
+class TwilioSMSController < ApplicationController
   def index
   end
 
@@ -23,7 +23,6 @@ class TwilioController < ApplicationController
   def process_sms
     @amount = params[:amount].to_i
     b = params[:Body]
-
     if b.downcase.include?("question")
       @type = "Question"
       @question = u.questions.build(:description => b)
@@ -38,5 +37,6 @@ class TwilioController < ApplicationController
       @type = "Not sure"
       render 'not_sure.xml.erb', :content_type => 'text/xml'
     end
+  end
 
 end
