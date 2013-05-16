@@ -29,8 +29,6 @@ group :development, :test do
   # http://rubydoc.info/github/thoughtbot/shoulda-matchers/master/frames
   gem 'shoulda-matchers'
   # This will massively speed up your tests
-  gem 'zeus'
-  gem 'guard-zeus'
   gem 'quiet_assets'
   gem 'thin'
 end

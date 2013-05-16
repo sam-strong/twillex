@@ -6,7 +6,6 @@ class ExchangesController < ApplicationController
 
 
     render :json => { amount: result, to_currency: params[:to_currency]}
-
   end
 
 end
