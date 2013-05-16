@@ -6,8 +6,8 @@ class Exchange
 
   def self.from_config
     # should instantiate a provider based on some config or initializer setting
-    return Exchange.new(OpenExchangeRatesProvider.new)
-    # return Exchange.new(DummyExchangeProvider.new(1.5))
+    # return Exchange.new(OpenExchangeRatesProvider.new)
+    return Exchange.new(DummyExchangeProvider.new(1.5))
   end
 
   def initialize(provider)
@@ -20,3 +20,35 @@ class Exchange
   end
 
 end
+
+
+
+
+# module ActiveRecord
+
+#   class Base
+
+#   end
+# end
+
+
+# module Free
+
+#   class Base
+
+#   end
+
+
+#   class Loader
+#     def hello
+#       ::Base.new
+#     end
+#   end
+# end
+
+# class Base
+
+# end
+
+# ActiveRecordBase
+# Free/Base

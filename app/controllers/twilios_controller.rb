@@ -2,6 +2,5 @@
 # work off that library instead of this
 class TwilioController < ApplicationController
   def create
-
   end
 end

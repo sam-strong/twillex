@@ -5,6 +5,10 @@ Twillex::Application.routes.draw do
   resources :users
 
   resource :twilio, :only => [:create]
+
+  namespace :sms do
+  resource :exchange, :only => [:create]
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
