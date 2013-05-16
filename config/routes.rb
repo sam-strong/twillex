@@ -2,6 +2,7 @@ Twillex::Application.routes.draw do
 
   root to: 'welcome#index'
   resource :exchange, :only => [:create]
+  resource :conversion, :only => [:create]
   resources :users
 
   resource :twilio, :only => [:create]

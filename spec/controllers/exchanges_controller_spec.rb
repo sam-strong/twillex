@@ -3,11 +3,7 @@ require 'spec_helper'
 describe ExchangesController do
   describe 'POST exchanges#create' do
     it 'converts a value' do
-
-      double = double(:exchange)
-      double.should_receive(:convert).with(3, "GBP", "USD").and_return(4.66)
-
-      Exchange.should_receive(:from_config).and_return(double)
+      Exchange.any_instance.should_receive(:convert).and_return(4.66)
 
       post :create, {:amount => 3, :from_currency => "GBP", :to_currency => "USD" }
       puts response.body
@@ -15,7 +11,5 @@ describe ExchangesController do
 
     end
   end
-
-
 end
 
