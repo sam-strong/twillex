@@ -1,4 +1,4 @@
-# require 'spec_helper'
+require 'spec_helper'
 
 describe Exchange do
 
@@ -15,6 +15,10 @@ describe Exchange do
         expect { exchange = Exchange.new(:provider) }.to raise_error
       end
     end
+
+    # it 'is configurable' do
+    #   Exchange.from_config.should be_success
+    # end
 
     context 'given the convert method is called' do
       it 'calls the convert method on the provider' do

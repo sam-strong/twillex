@@ -6,7 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'twilio-ruby'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,8 +29,8 @@ group :development, :test do
   # http://rubydoc.info/github/thoughtbot/shoulda-matchers/master/frames
   gem 'shoulda-matchers'
   # This will massively speed up your tests
-  gem 'zeus'
-  gem 'guard-zeus'
+  gem 'quiet_assets'
+  gem 'thin'
 end
 
 gem 'jquery-rails'

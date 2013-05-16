@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe UsersController do
 
-  let(:attributes) {{:phone_number => "0712345678",:from_currency => "USD", :to_currency => "GBP" }}
+  let(:attributes) {{:phone_number => "0712345678",:from_currency => "USD", :to_currency => "GBP", :name => "Jimmy" }}
 
   describe "#new" do
 
@@ -20,6 +20,9 @@ describe UsersController do
 
   describe "#create" do
     context "with valid attributes" do
+
+      before { TwilioApi.any_instance.stub(:send_sms) }
+
       it "creates a new User" do
 
         expect {
@@ -35,6 +38,11 @@ describe UsersController do
       it "redirects to the homepage after user is created" do
         post :create, {:user => attributes }
         response.should redirect_to(root_path)
+      end
+
+      it 'sends a welcome text'   do
+        TwilioApi.any_instance.should_receive(:send_sms).with("0712345678", "Hey Jimmy you have signed up to convert USD to GBP! Twillex love xx!")
+         post :create, {:user => attributes}
       end
     end
 
