@@ -7,7 +7,9 @@ Twillex::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
-  match 'twilio/process_sms' => 'twilio#process_sms'
+  match 'twilio/process_sms' => 'twiliosms#process_sms'
+
+  match 'twilio/send_sms' => 'twiliosms#send_sms'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

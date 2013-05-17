@@ -2,10 +2,19 @@ class TwilioSMSController < ApplicationController
   def index
   end
 
-  def send_text_message
+  s
+
+
+
+
+
+
+
+
+  def send_sms
     number_to_send_to = params[:number_to_send_to]
 
-    account_sid = "AC2272335f96708cace80d492da00d18ed"
+    account_sid = "AC2272335f96708  cace80d492da00d18ed"
     auth_token = "777673f58d73ae1790981f72f9b410de"
     twilio_phone_number = "441704450128"
 
